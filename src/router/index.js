@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import main from '../router/main/main.js'
 
 Vue.use(VueRouter)
 
@@ -18,11 +19,14 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     },
+    // {
+    //   path: '/vxetable_html',
+    //   name: 'vxetable_html',
+    //   component: () => import('../components/basictable/VxeTable_HTML.vue')
+    // },
     {
-      path: '/vxetable_html',
-      name: 'vxetable_html',
-      component: () => import('../components/basictable/VxeTable_HTML.vue')
-  }
+      ...main
+    }
 ]
 
 const router = new VueRouter({
