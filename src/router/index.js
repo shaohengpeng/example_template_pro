@@ -21,7 +21,7 @@ Vue.use(VueRouter)
     {
       path: '/vxetable_html',
       name: 'vxetable_html',
-      component: () => import('../components/VxeTable_HTML.vue')
+      component: () => import('../components/basictable/VxeTable_HTML.vue')
   }
 ]
 
